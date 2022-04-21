@@ -9,7 +9,7 @@
 
 const Sequelize = require('sequelize');
 const dbConfig = require('../config/config.json');
-const env = "dev";
+const env = "production";
 const db = dbConfig[env];
 
 const sequelize = new Sequelize(
