@@ -108,7 +108,7 @@ const signIn = async (req, res) => {
                     message: 'User NOT found'
                 })
             } else{
-                let cmprePass = await bcrypt.compare(password,user.password)
+                let cmprePass = await bcrypt.compareSync(password,user.password)
                
                 if(!cmprePass){
                     return res.status(401).send({
