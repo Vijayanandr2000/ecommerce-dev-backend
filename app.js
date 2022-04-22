@@ -76,7 +76,7 @@ require('./routes/product')(app)
 require('./routes/auth')(app)
 require('./routes/cart')(app)
 
-app.listen(serverConfig.PORT,async() => {
+app.listen( process.env.PORT || serverConfig.PORT,async() => {
     console.log(`server starts in PORT ${serverConfig.PORT}`);
     try {
         await db.sequelize.authenticate();
